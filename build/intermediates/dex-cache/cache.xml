@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudioprojects\SDK\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="D:\AndroidStudioprojects\CoolWeather\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1_5cf4c02d3b3513eadd973cc4162bb9bf800a49e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudioprojects\CoolWeather\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="D:\AndroidStudioprojects\CoolWeather\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.1_4a0a1145b84d9763113f7cc6da2876cd4e5d84dc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudioprojects\CoolWeather\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="D:\AndroidStudioprojects\CoolWeather\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1_8d6c9e726eb840aa8e9e008d7e4b0fa2016061dc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudioprojects\CoolWeather\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b8504f0302a702e1b462674dd4e6f53121043a0">
+        <dex dex="D:\AndroidStudioprojects\CoolWeather\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_ac529dd8044e3d50c8c275590acbcf50250b197c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudioprojects\CoolWeather\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="786ed08414dec92b8da72acc7e219e36c9f38203">
+        <dex dex="D:\AndroidStudioprojects\CoolWeather\app\build\intermediates\pre-dexed\debug\instant-run_7299e5cffed9c3369d00e2e63c697a028b18b1da.jar" />
+    </item>
+
+</items>
