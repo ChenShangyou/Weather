@@ -15,10 +15,10 @@ import com.coolweather.util.CoolWeatherOpenHelper;
 
 public class DBController {
 	
-	//数据库名称
+
 	public static final String DB_NAME = "cool_weather";
 	
-	//数据库版本
+
 	public static final int VERSION = 1;
 	
 	private static DBController mDbController;
@@ -26,27 +26,16 @@ public class DBController {
 
 	private DBController(Context context) {
 		CoolWeatherOpenHelper dbHelper = new CoolWeatherOpenHelper(context, DB_NAME, null, VERSION);
-		db = dbHelper.getWritableDatabase();//拥有可读可写的权限
+		db = dbHelper.getWritableDatabase();
 	}
-	
-	/**
-	 * 单例模式获取数据库操作实例
-	 * 
-	 * @param context
-	 * @return
-	 */
+
 	public synchronized static DBController getInstance(Context context) {
 		if ( mDbController==null ) {
 			mDbController = new DBController(context);
 		}
 		return mDbController;
 	}
-	
-	/**
-	 * 将Province的实例保存到数据库
-	 * 
-	 * @param province
-	 */
+
 	public void saveProvince(Province province){
 		if ( province!=null ) {
 			ContentValues values = new ContentValues();
@@ -55,12 +44,6 @@ public class DBController {
 			db.insert("Province", null, values);
 		}
 	}
-	
-	/**
-	 * 从数据库读取全国所有的省份信息
-	 * 
-	 * @return
-	 */
 	public List<Province> loadProvinces(){
 		List<Province> list = new ArrayList<Province>();
 		Cursor cursor = db.query("Province", null, null, null, null, null, null);
@@ -75,12 +58,7 @@ public class DBController {
 		}
 		return list;
 	}
-	
-	/**
-	 * 将City的实例保存到数据库
-	 * 
-	 * @param province
-	 */
+
 	public void saveCity(City city){
 		if ( city!=null ) {
 			ContentValues values = new ContentValues();
@@ -90,12 +68,6 @@ public class DBController {
 			db.insert("City", null, values);
 		}
 	}
-	
-	/**
-	 * 从数据库读取全国所有的城市信息
-	 * 
-	 * @return
-	 */
 	public List<City> loadCities(int provinceId){
 		List<City> list = new ArrayList<City>();
 		Cursor cursor = db.query("City", null, "province_id = ?", new String[]{String.valueOf(provinceId)}, 
@@ -112,12 +84,7 @@ public class DBController {
 		}
 		return list;
 	}
-	
-	/**
-	 * 将County的实例保存到数据库
-	 * 
-	 * @param province
-	 */
+
 	public void saveCounty(County county){
 		if ( county!=null ) {
 			ContentValues values = new ContentValues();
@@ -127,12 +94,7 @@ public class DBController {
 			db.insert("County", null, values);
 		}
 	}
-	
-	/**
-	 * 从数据库读取某城市下所有县的信息
-	 * 
-	 * @return
-	 */
+
 	public List<County> loadCounties(int cityId){
 		List<County> list = new ArrayList<County>();
 		Cursor cursor = db.query("County", null, "city_id = ?", new String[]{String.valueOf(cityId)}, 

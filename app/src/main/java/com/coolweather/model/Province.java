@@ -1,11 +1,5 @@
 package com.coolweather.model;
 
-/**
- * 省份的实体
- * 
- * @author zhou.ni
- *
- */
 @SuppressWarnings("serial")
 public class Province extends SuperBean{
 	

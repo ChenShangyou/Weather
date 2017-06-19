@@ -18,16 +18,13 @@ public class BaseActivity extends Activity {
 		Log.d(TAG , getClass().getSimpleName());
 		
 		mDbController = DBController.getInstance(getApplicationContext());
-		
-		//把Activity添加到列表
-//		ActivityCollector.addActivity(this);
+
 	}
 	
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		//从列表中移除Activity
-//		ActivityCollector.removeActivity(this);
+
 	}
 	
 }

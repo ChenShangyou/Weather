@@ -12,12 +12,6 @@ import android.preference.PreferenceManager;
 
 public class JsonParseUtil {
 
-	/**
-	 * 解析天气的返回结果
-	 * 
-	 * @param context
-	 * @param response
-	 */
 	public static void handleWeatherResponse(Context context, String response) {
 		try {
 			JSONObject jsonObject = new JSONObject(response);
@@ -34,18 +28,6 @@ public class JsonParseUtil {
 			e.printStackTrace();
 		}
 	}
-
-	/**
-	 * 将服务器返回的所有信息存储到sharedPreferences文件中
-	 * 
-	 * @param context
-	 * @param cityName
-	 * @param weatherCode
-	 * @param temp1
-	 * @param temp2
-	 * @param weatherDesp
-	 * @param publishTime
-	 */
 	public static void saveWeatherInfo(Context context, String cityName,
 			String weatherCode, String temp1, String temp2, String weatherDesp,
 			String publishTime) {

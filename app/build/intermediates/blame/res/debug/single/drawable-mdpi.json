@@ -2,5 +2,9 @@
     {
         "merged": "D:\\AndroidStudioprojects\\CoolWeather\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",
         "source": "D:\\AndroidStudioprojects\\CoolWeather\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioprojects\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",
+        "source": "D:\\AndroidStudioprojects\\Weather\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     }
 ]

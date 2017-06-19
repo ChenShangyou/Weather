@@ -30,26 +30,21 @@ public class ChooseAreaActivity extends BaseActivity {
 	public static final int LEVEL_CITY = 1;
 	public static final int LEVEL_COUNTY = 2;
 
-	private TextView titleText;// 标题view
-	private ListView listView;// 列表view
+	private TextView titleText;
+	private ListView listView;
 	private ArrayAdapter<String> adapter;
 	private List<String> dataList = new ArrayList<String>();
 
-	// 省列表
+
 	private List<Province> provinceList;
-	// 市列表
 	private List<City> cityList;
-	// 县列表
 	private List<County> countyList;
 
-	// 选中的省份
 	private Province selectedProvince;
-	// 选中的城市
 	private City selectedCity;
-	// 当前选中的级别
 	private int currentLevel;
 
-	// 是否从WeatherActivity跳转过来的
+
 	private boolean isFromWeatherActivity;
 
 	@Override
@@ -59,8 +54,6 @@ public class ChooseAreaActivity extends BaseActivity {
 				"from_weather_activity", false);
 		SharedPreferences prefs = PreferenceManager
 				.getDefaultSharedPreferences(this);
-
-		//已经选择了城市，且不是从WeatherActivity跳转过来，才会直接跳转到WeatherActivity
 		if ( prefs.getBoolean("city_selected", false) && !isFromWeatherActivity ) {
 			Intent intent = new Intent(this, WeatherActivity.class);
 			startActivity(intent);
@@ -72,9 +65,6 @@ public class ChooseAreaActivity extends BaseActivity {
 		initView();
 	}
 
-	/**
-	 * 初始化控件
-	 */
 	private void initView() {
 		listView = (ListView) this.findViewById(R.id.list_view);
 		titleText = (TextView) this.findViewById(R.id.title_text);
@@ -105,12 +95,9 @@ public class ChooseAreaActivity extends BaseActivity {
 			}
 		});
 
-		queryProvinces();// 加载省级数据
+		queryProvinces();
 	}
 
-	/**
-	 * 查询全国所有的省，优先从数据库查询，如果没有查询到再去服务器上查询
-	 */
 	private void queryProvinces() {
 		provinceList = mDbController.loadProvinces();
 		if (provinceList != null && provinceList.size() > 0) {
@@ -129,9 +116,6 @@ public class ChooseAreaActivity extends BaseActivity {
 
 	}
 
-	/**
-	 * 查询选中省内所有的市，优先从数据库查询，如果没有查询到再去服务器上查询
-	 */
 	private void queryCities() {
 		cityList = mDbController.loadCities(selectedProvince.getId());
 		if (cityList != null && cityList.size() > 0) {
@@ -150,9 +134,6 @@ public class ChooseAreaActivity extends BaseActivity {
 
 	}
 
-	/**
-	 * 查询选中市内所有的县，优先从数据库查询，如果没有查询到再去服务器上查询
-	 */
 	private void queryCounties() {
 		countyList = mDbController.loadCounties(selectedCity.getId());
 		if (countyList != null && countyList.size() > 0) {
@@ -171,12 +152,6 @@ public class ChooseAreaActivity extends BaseActivity {
 
 	}
 
-	/**
-	 * 根据传入的代号和类型从服务器上查询省市县数据
-	 * 
-	 * @param object
-	 * @param string
-	 */
 	private void queryFromServer(final String code, final String type) {
 		String address;
 		if (!TextUtils.isEmpty(code)) {
@@ -234,10 +209,6 @@ public class ChooseAreaActivity extends BaseActivity {
 		});
 
 	}
-
-	/**
-	 * 捕获Back键，根据当前的级别来判断，此时应该返回市列表、省列表，还是直接退出
-	 */
 	@Override
 	public void onBackPressed() {
 		if (currentLevel == LEVEL_COUNTY) {

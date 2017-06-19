@@ -14,12 +14,6 @@ import android.os.IBinder;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
 
-/**
- * 后台自动更新天气
- * 
- * @author zhou.ni
- * 
- */
 public class AutoUpdateService extends Service {
 
 	@Override
@@ -38,7 +32,7 @@ public class AutoUpdateService extends Service {
 		}).start();
 
 		AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
-		int anHour = 8 * 60 * 60 * 1000; // 这是8小时的毫秒数
+		int anHour = 8 * 60 * 60 * 1000;
 		long triggerAtTime = SystemClock.elapsedRealtime() + anHour;
 		Intent i = new Intent(this, AutoUpdaterReceiver.class);
 		PendingIntent pi = PendingIntent.getBroadcast(this, 0, i, 0);
@@ -47,9 +41,7 @@ public class AutoUpdateService extends Service {
 		return super.onStartCommand(intent, flags, startId);
 	}
 
-	/**
-	 * 更新天气信息.
-	 */
+
 	private void updateWeather() {
 		SharedPreferences prefs = PreferenceManager
 				.getDefaultSharedPreferences(this);

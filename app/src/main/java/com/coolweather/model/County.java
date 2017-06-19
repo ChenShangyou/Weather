@@ -1,11 +1,5 @@
 package com.coolweather.model;
 
-/**
- * 某一个县的实体
- * 
- * @author zhou.ni
- * 
- */
 @SuppressWarnings("serial")
 public class County extends SuperBean {
 

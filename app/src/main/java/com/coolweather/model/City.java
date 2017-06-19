@@ -1,18 +1,11 @@
 package com.coolweather.model;
-
-/**
- * 城市的实体
- * 
- * @author zhou.ni
- *
- */
 @SuppressWarnings("serial")
 public class City extends SuperBean {
 
 	private int id;
 	private String cityName;
 	private String cityCode;
-	private int provinceId; // 省份的id
+	private int provinceId;
 
 	public int getId() {
 		return id;

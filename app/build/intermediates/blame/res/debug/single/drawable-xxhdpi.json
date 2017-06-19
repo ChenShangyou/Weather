@@ -1,7 +1,19 @@
 [
     {
+        "merged": "D:\\AndroidStudioprojects\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
+        "source": "D:\\AndroidStudioprojects\\Weather\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioprojects\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\refresh.png",
+        "source": "D:\\AndroidStudioprojects\\Weather\\app\\src\\main\\res\\drawable-xxhdpi\\refresh.png"
+    },
+    {
         "merged": "D:\\AndroidStudioprojects\\CoolWeather\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
         "source": "D:\\AndroidStudioprojects\\CoolWeather\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioprojects\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\home.png",
+        "source": "D:\\AndroidStudioprojects\\Weather\\app\\src\\main\\res\\drawable-xxhdpi\\home.png"
     },
     {
         "merged": "D:\\AndroidStudioprojects\\CoolWeather\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\home.png",
